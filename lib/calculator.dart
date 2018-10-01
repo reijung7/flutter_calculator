@@ -149,11 +149,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                   UnaryOperatorButton(
                     text: plus_or_minus_sign,
-                    onPressed: (){_unaryOperationAction(UnaryOperation.changeSign);},
+                    onPressed: () {
+                      _unaryOperationAction(UnaryOperation.changeSign);
+                    },
                   ),
                   UnaryOperatorButton(
                     text: percent_sign,
-                    onPressed: (){_unaryOperationAction(UnaryOperation.percent);},
+                    onPressed: () {
+                      _unaryOperationAction(UnaryOperation.percent);
+                    },
                   ),
                   BinaryOperatorButton(
                     text: divide_sign,
@@ -226,7 +230,7 @@ class _HomePageState extends State<HomePage> {
                   NumberButton(
                       text: "2",
                       onPressed: () {
-                        _numberButtonAction("3");
+                        _numberButtonAction("2");
                       }),
                   NumberButton(
                       text: "3",
@@ -244,7 +248,11 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  ZeroButton(onPressed: (){_zeroButtonAction();},),
+                  ZeroButton(
+                    onPressed: () {
+                      _zeroButtonAction();
+                    },
+                  ),
                   BinaryOperatorButton(
                     text: ".",
                     onPressed: () {
@@ -265,7 +273,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
 
   void initialiseValues() {
     operand1 = null;
@@ -301,7 +308,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
- void _numberButtonAction(String text) {
+  void _numberButtonAction(String text) {
     if (result != null) initialiseValues();
     if (isOperand1Completed) {
       if (operand2 == null) {
@@ -319,8 +326,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {});
   }
 
-
- void _zeroButtonAction() {
+  void _zeroButtonAction() {
     if (result != null) initialiseValues();
     if (isOperand1Completed) {
       if (operand2 == null || operand1 == "0")
@@ -338,7 +344,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {});
   }
 
- void _binaryOperationAction(BinaryOperation operation) {
+  void _binaryOperationAction(BinaryOperation operation) {
     switch (operation) {
       case BinaryOperation.add:
         if (operand2 != null) {
@@ -384,7 +390,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {});
   }
 
- void _unaryOperationAction(UnaryOperation operation) {
+  void _unaryOperationAction(UnaryOperation operation) {
     switch (operation) {
       case UnaryOperation.changeSign:
         if (result != null)

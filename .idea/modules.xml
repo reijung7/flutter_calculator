@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flutter_calculator.iml" filepath="$PROJECT_DIR$/flutter_calculator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/flutter_calculator_android.iml" filepath="$PROJECT_DIR$/flutter_calculator_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flutter_calculator.iml" filepath="$PROJECT_DIR$/.idea/flutter_calculator.iml" />
     </modules>
   </component>
 </project>
